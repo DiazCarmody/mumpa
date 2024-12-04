@@ -1,0 +1,210 @@
+:root[data-theme="light"]{
+    --background-color: #ffffff;
+    --nav-background-color: #ffffffaf;
+    --font-color: #111;
+    --border-color: #DDD;
+
+    --purple-color: #673AB7;
+    --red-color: #EA4335;
+    --yellow-color: #FBBC05;
+    --green-color: #8DC44F;
+    --blue-color: #4486F4;
+
+    --font-blue: #3483FA;
+    --background-blue: #E3EDFB;
+    --background-gray: #ededed;
+
+    --showsun: block;
+    --showmoon: none;
+
+    --svg-color: invert(0%) sepia(18%) saturate(4709%) hue-rotate(35deg) brightness(105%) contrast(87%);
+}
+
+:root[data-theme="dark"]{
+    --background-color: #111;
+    --nav-background-color: #111111af;
+    --font-color: #f8f8f8;
+    --border-color: #333;
+
+    --purple-color: #673AB7;
+    --red-color: #EA4335;
+    --yellow-color: #FBBC05;
+    --green-color: #8DC44F;
+    --blue-color: #4486F4;
+
+    --font-blue: #3483FA;
+    --background-blue: #1c1d1f;
+    --background-gray: #181818;
+
+    --showsun: none;
+    --showmoon: block;
+
+    --svg-color: invert(100%) sepia(4%) saturate(1255%) hue-rotate(261deg) brightness(120%) contrast(87%);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    transition: 0.2s;
+}
+::selection{
+    background: none;
+    color: var(--blue-color);
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 24
+}
+body{
+    background-color: var(--background-color);
+
+    width: 100%;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    overflow: hidden;
+}
+main{
+    width: 100%;
+    color: var(--font-color);
+}
+.main-header{
+    position: relative;
+}
+.main-header-info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10%;
+
+    color: white;
+
+    width: 100%;
+    height: 90dvh;
+    overflow: hidden;
+    z-index: 30;
+}
+.main-header-info img{
+    width: 300px;
+    height: 300px;
+
+    filter: brightness(900%);
+}
+
+.main-header-info h2{
+    font-weight: 300;
+}
+
+.shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    transform: rotate(180deg);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+
+    border-top: var(--border-color) 1px solid;
+
+    width: 100%;
+    padding: 10px;
+}
+footer section{
+    width: 100%;
+    padding: 10px;
+}
+footer section iframe{
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+footer section div{
+    padding: 10px;
+}
+footer section div .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+footer section div span{
+    margin-right: 8px;
+}
+footer section div p{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    padding: 5px;
+}
+footer section:last-child{
+    display: inline-block;
+    text-align: center;
+    border-top: var(--border-color) 1px solid;
+    width: 100%;
+}
+footer strong{
+    margin: 0px 6px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 640px){
+    footer section{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+}
+@media screen and (min-width: 844px){
+
+}
+@media screen and (min-width: 1300px){
+    footer section{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes mainheaderbackground {
+    0%   {
+        background-image: url(../images/museo/museo1.jpg);
+    }
+    25%{
+        background-image: url(../images/museo/museo2.jpg);
+    }
+    50%{
+        background-image: url(../images/museo/museo3.jpg);
+    }
+    75%{
+        background-image: url(../images/museo/museo4.jpg);
+    }
+    100%{
+        background-image: url(../images/museo/museo1.jpg);
+    }
+}
+
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]{
+    display: none;
+}
+}

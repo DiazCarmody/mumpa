@@ -1,0 +1,170 @@
+:root[data-theme="light"]{
+  --fontcolor: #131212;
+  --navbg: #fdfdfd;
+  --navborder: #cacaca;
+  --navselected: #94c94e;
+}
+
+:root[data-theme="dark"] {
+  --fontcolor: #fdfdfd;
+  --navbg: #131212;
+  --navborder: #4b4a4a;
+  --navselected: #94c94e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  box-sizing: border-box;
+}
+
+a {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old Firefox */
+  -ms-user-select: none; /* Explorer/Edge */
+  user-select: none; /* current */
+}
+nav .navcontent ul li a:hover{
+  color: var(--navselected);
+  transition: 0.4s;
+}
+nav .navcontent ul li ul li a:hover{
+  color: var(--navbg);
+  transition: 0.4s;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: start;
+
+  background-color: var(--navbg);
+  border-bottom: var(--navborder) 1px solid;
+
+  z-index: 100;
+  width: 100%;
+  min-height: 45px; max-height: 45px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navinicio{
+  padding: 0px 10px;
+}
+.mumpalogo{
+  position: absolute;
+  margin-left: 20px;
+  top: 8px;
+}
+
+nav ul{
+  list-style: none;
+  width: 100%;
+  left: 0;
+  padding: 0;
+}
+nav ul li {
+  position: relative;
+  float: left;
+  display: inline;  
+  padding: 0;
+}
+
+nav ul a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--fontcolor);
+  padding: 12px 20px;
+}
+.bwi{
+  margin-right: 19%;
+}
+.navicon{
+  position: absolute;
+  margin-left: 80%;
+  padding-top: 0%;
+}
+nav ul li .aft::after{
+  content: '';
+  position: absolute;
+  background-color: var(--navselected);
+  width: 0%;
+  height: 3px;
+  left: 20%;
+  bottom: 0;
+  border-radius: 5px;
+}
+nav ul li .aft:hover::after {
+  width: 60%;
+  transition: 0.5s;
+} 
+
+nav ul li:hover > ul {
+  height: 88px;
+
+  transition: 0.8s;
+}
+
+nav ul li ul{
+  height: 0px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-left: var(--navborder) 1px solid;
+  border-right: var(--navborder) 1px solid;
+  border-bottom: var(--navborder) 1px solid;
+  border-top: none;
+
+  color: var(--fontcolor);
+  position: absolute;
+
+  left: -48%;
+
+  width: 150px;
+
+  background-color: var(--navbg);
+  color: var(--fontcolor);
+}
+
+
+nav ul li ul li{
+  box-sizing: border-box;
+  width: 200px;
+
+}
+nav ul li ul li a:hover {
+  background-color: var(--navselected);
+  transition: 0.5s;
+}
+
+
+nav ul li ul ul{
+  left: 200px;
+  top: 0px;
+}
+
+.navlabel {
+  cursor: pointer;
+  display: none;
+  width: 10px;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1035px){
+  
+}
+
+@media screen and (max-width: 840px){
+  
+}

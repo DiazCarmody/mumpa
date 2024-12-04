@@ -1,0 +1,33 @@
+body{
+    background-color: #ededed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.contenedor-lista{
+    display: grid;
+    align-items: center;
+    width: 92%;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    border: black 1px solid;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+.seccion-animal p{
+    margin-left: 20px;
+}
+.seccion-descripcion{
+    border-left: black 1px solid;
+}
+.seccion-descripcion p{
+    margin-left: 20px;
+}
